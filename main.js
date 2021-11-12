@@ -1,18 +1,17 @@
 
- 
 
-window.onchange('resize', adjustStyle())
+window.addEventListener('resize', adjustStylesheet(), false);
 
-function adjustStyle() {
-  const screenSize = window.screen.width;
-  let stylesheet = document.getElementById("stylesheet");
-  if ( screenSize > 900) {
+function adjustStylesheet() {
+ let stylesheet = document.getElementById("stylesheet");
+  if ( window.screen.availWidth > 900) {
     stylesheet.setAttribute("href", "desktop.css");
-  } else if (screenSize > 648) {
+  } else if (window.screen.availWidth > 648) {
     stylesheet.setAttribute("href", "tablet.css");
   } else {
     stylesheet.setAttribute("href", "mobile.css"); 
   }
 }
+
 
 
