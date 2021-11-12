@@ -1,4 +1,5 @@
 
+// displays the correct stylessheet depending on viewport with
 
 window.addEventListener('resize', adjustStylesheet(), false);
 
